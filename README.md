@@ -1,5 +1,15 @@
-# Etch-a-sketch
-A simple Etch A Sketch web app
-This project is a digital Etch-a-Sketch game. Skills demonstrated include HTML, CSS, JavaScript, DOM manipulation, and Git version control.
 # Etch-a-Sketch
-This project is a digital Etch-a-Sketch game. Skills demonstrated include HTML, CSS, JavaScript, DOM manipulation, and Git version control.
+
+A simple digital Etch-a-Sketch built with **HTML, CSS, and JavaScript**.
+
+### Features
+
+- Dynamic grid generation
+- Hover-to-draw interaction
+- Adjustable grid size
+- Clean DOM manipulation
+- Git version control practice
+
+### Skills Demonstrated
+
+JavaScript fundamentals, DOM manipulation, CSS layout, event handling, and Git workflow.
