@@ -6,10 +6,16 @@
     <title>ETCH-A-SKETCH</title>
   </head>
   <body>
-    <div id="gridSize-container">
-      <label for="gridSize">New grid size:</label>
-      <input type="number" id="gridSize" min="1" max="100" />
-      <button id="gridSizeBtn">Submit</button>
+    <div id="form" class="form">
+      <p>New grid size:</p>
+      <input
+        type="number"
+        id="user-input"
+        min="1"
+        max="100"
+        class="user-input"
+      />
+      <button id="submitBtn" class="submitBtn">Submit</button>
     </div>
 
     <div id="color-container">
