@@ -13,7 +13,9 @@ function createGrid(size) {
 
   let totalCells = size * size;
   for (let i = 0; i < totalCells; i++) {
+    // Create a new div element as a single grid cell
     let cell = document.createElement("div");
+    // Add a CSS class
     cell.classList.add("grid-cell");
   }
 }
