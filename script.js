@@ -1,7 +1,18 @@
+// Get DOM elements
 const userInput = document.getElementById("user-input");
 const submitBtn = document.getElementById("submitBtn");
 const gridContainer = document.getElementById("grid-container");
 
+// CreateGrid function
+function createGrid(size) {
+  // Clear existing grid
+  gridContainer.innerHTML = "";
+  gridContainer.style.display = "grid";
+  gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  gridContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+}
+
+// Button click event
 submitBtn.addEventListener("click", () => {
   const gridSize = Number(userInput.value);
 
