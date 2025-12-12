@@ -10,6 +10,12 @@ function createGrid(size) {
   gridContainer.style.display = "grid";
   gridContainer.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   gridContainer.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+  let totalCells = size * size;
+  for (let i = 0; i < totalCells; i++) {
+    let cell = document.createElement("div");
+    cell.classList.add("grid-cell");
+  }
 }
 
 // Button click event
