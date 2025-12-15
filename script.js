@@ -19,6 +19,7 @@ function createGrid(size) {
     cell.classList.add("grid-cell");
   }
 }
+gridContainer.appendChild(cell);
 
 // Button click event
 submitBtn.addEventListener("click", () => {
