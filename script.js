@@ -17,9 +17,15 @@ function createGrid(size) {
     let cell = document.createElement("div");
     // Add a CSS class
     cell.classList.add("grid-cell");
+
+    // Add mouseover event
+    cell.addEventListener("mouseover", (e) => {
+      e.target.style.backgroundColor = "black";
+    });
+
+    gridContainer.appendChild(cell);
   }
 }
-gridContainer.appendChild(cell);
 
 // Button click event
 submitBtn.addEventListener("click", () => {
@@ -30,6 +36,8 @@ submitBtn.addEventListener("click", () => {
   } else if (gridSize < 1 || gridSize > 100) {
     alert("Please enter a number between 1 and 100!");
   } else {
-    console.log("User entered:", gridSize);
+    createGrid(gridSize);
   }
 });
+
+createGrid(16);
