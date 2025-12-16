@@ -41,3 +41,11 @@ submitBtn.addEventListener("click", () => {
 });
 
 createGrid(16);
+
+function getSelectedPenColor() {
+  const blackRadio = document.getElementById("black-pen");
+  const redRadio = document.getElementById("red-pen");
+  const blueRadio = document.getElementById("blue-pen");
+  const rainbowRadio = document.getElementById("rainbow-pen");
+  const eraserRadio = document.getElementById("eraser");
+}
