@@ -42,6 +42,15 @@ submitBtn.addEventListener("click", () => {
 
 createGrid(16);
 
+const clearBtn = document.getElementById("clearBtn");
+
+clearBtn.addEventListener("click", () => {
+  const cells = document.querySelectorAll(".grid-cell");
+  cells.forEach((cell) => {
+    cell.style.backgroundColor = "white";
+  });
+});
+
 function getSelectedPenColor() {
   if (document.getElementById("black-pen").checked) {
     return "black";
