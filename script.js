@@ -20,7 +20,7 @@ function createGrid(size) {
 
     // Add mouseover event
     cell.addEventListener("mouseover", (e) => {
-      e.target.style.backgroundColor = "black";
+      e.target.style.backgroundColor = getSelectedPenColor();
     });
 
     gridContainer.appendChild(cell);
@@ -43,9 +43,19 @@ submitBtn.addEventListener("click", () => {
 createGrid(16);
 
 function getSelectedPenColor() {
-  const blackRadio = document.getElementById("black-pen");
-  const redRadio = document.getElementById("red-pen");
-  const blueRadio = document.getElementById("blue-pen");
-  const rainbowRadio = document.getElementById("rainbow-pen");
-  const eraserRadio = document.getElementById("eraser");
+  if (document.getElementById("black-pen").checked) {
+    return "black";
+  }
+  if (document.getElementById("red-pen").checked) {
+    return "red";
+  }
+  if (document.getElementById("blue-pen").checked) {
+    return "blue";
+  }
+  if (document.getElementById("rainbow-pen").checked) {
+    return `hsl(${Math.random() * 360}, 100%, 50%)`;
+  }
+  if (document.getElementById("eraser").checked) {
+    return "white";
+  }
 }
