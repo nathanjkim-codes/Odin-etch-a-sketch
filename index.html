@@ -7,46 +7,48 @@
     <title>ETCH-A-SKETCH</title>
   </head>
   <body>
-    <h1>ETCH-A-SKETCH</h1>
-    <div id="controls" class="controls">
-      <span>New grid size:</span>
-      <input
-        type="number"
-        id="user-input"
-        min="1"
-        max="100"
-        class="user-input"
-      />
-      <button id="submitBtn" class="submitBtn">Submit</button>
-    </div>
+    <div class="app">
+      <h1>ETCH-A-SKETCH</h1>
+      <div id="controls" class="controls">
+        <span>New grid size:</span>
+        <input
+          type="number"
+          id="user-input"
+          min="1"
+          max="100"
+          class="user-input"
+        />
+        <button id="submitBtn" class="submitBtn">Submit</button>
+      </div>
 
-    <div id="color-container" class="controls">
-      <input type="radio" id="black-pen" name="pen" value="black-pen" /><label
-        for="black-pen"
-        >Black</label
-      >
-      <input type="radio" id="red-pen" name="pen" value="red-pen" /><label
-        for="red-pen"
-        >Red</label
-      >
-      <input type="radio" id="blue-pen" name="pen" value="blue-pen" /><label
-        for="blue-pen"
-        >Blue</label
-      >
-      <input
-        type="radio"
-        id="rainbow-pen"
-        name="pen"
-        value="rainbow-pen"
-      /><label for="rainbow-pen">Rainbow</label>
-      <input type="radio" id="eraser" name="pen" value="eraser" /><label
-        for="eraser"
-        >Eraser</label
-      >
-      <button id="clearBtn" class="clearBtn">Clear</button>
-    </div>
+      <div id="color-container" class="controls">
+        <input type="radio" id="black-pen" name="pen" value="black-pen" /><label
+          for="black-pen"
+          >Black</label
+        >
+        <input type="radio" id="red-pen" name="pen" value="red-pen" /><label
+          for="red-pen"
+          >Red</label
+        >
+        <input type="radio" id="blue-pen" name="pen" value="blue-pen" /><label
+          for="blue-pen"
+          >Blue</label
+        >
+        <input
+          type="radio"
+          id="rainbow-pen"
+          name="pen"
+          value="rainbow-pen"
+        /><label for="rainbow-pen">Rainbow</label>
+        <input type="radio" id="eraser" name="pen" value="eraser" /><label
+          for="eraser"
+          >Eraser</label
+        >
+        <button id="clearBtn" class="clearBtn">Clear</button>
+      </div>
 
-    <div id="grid-container"></div>
+      <div id="grid-container"></div>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>
