@@ -18,13 +18,12 @@ function createGrid(size) {
     // Add a CSS class
     cell.classList.add("grid-cell");
 
-    // Add mouseover event
+    // Mouseover event for progressive darkening
     cell.addEventListener("mouseover", (e) => {
-      e.target.style.backgroundColor = getSelectedPenColor();
-    });
-
-    gridContainer.appendChild(cell);
-  }
+      // If black pen is selected, apply progressive darkening
+   if (document.getElementById("black-pen").checked) {
+    let currentOpacity = Number(e.target.dataset.opacity) || 0;
+   }
 }
 
 // Button click event
