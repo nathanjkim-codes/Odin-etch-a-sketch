@@ -23,6 +23,13 @@ function createGrid(size) {
       // If black pen is selected, apply progressive darkening
    if (document.getElementById("black-pen").checked) {
     let currentOpacity = Number(e.target.dataset.opacity) || 0;
+
+    if (currentOpacity < 1) {
+      currentOpacity += 0.1;
+    }
+    e.target.dataset.opacity = currentOpacity;
+    e.target.style.backgroundColor = "black";
+    e.target.style.opacity = currentOpacity;
    }
 }
 
