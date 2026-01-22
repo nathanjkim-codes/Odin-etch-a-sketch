@@ -31,12 +31,13 @@ function createGrid(size) {
     e.target.style.backgroundColor = "black";
     e.target.style.opacity = currentOpacity;
    }
-   // other pen modes (non-black pens)
+   // Other pen modes (non-black pens)
   else {
-    e.target.style.opacity = 1; // opacity 초기화
+    e.target.style.opacity = 1; // Reset opacity
     e.target.style.backgroundColor = getSelectedPenColor();
   }
 });
+gridContainer.appendChild(cell);
 }
 
 // Button click event
