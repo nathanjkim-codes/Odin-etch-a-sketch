@@ -21,23 +21,24 @@ function createGrid(size) {
     // Mouseover event for progressive darkening
     cell.addEventListener("mouseover", (e) => {
       // If black pen is selected, apply progressive darkening
-   if (document.getElementById("black-pen").checked) {
-    let currentOpacity = Number(e.target.dataset.opacity) || 0;
+      if (document.getElementById("black-pen").checked) {
+        let currentOpacity = Number(e.target.dataset.opacity) || 0;
 
-    if (currentOpacity < 1) {
-      currentOpacity += 0.1;
-    }
-    e.target.dataset.opacity = currentOpacity;
-    e.target.style.backgroundColor = "black";
-    e.target.style.opacity = currentOpacity;
-   }
-   // Other pen modes (non-black pens)
-  else {
-    e.target.style.opacity = 1; // Reset opacity
-    e.target.style.backgroundColor = getSelectedPenColor();
+        if (currentOpacity < 1) {
+          currentOpacity += 0.1;
+        }
+        e.target.dataset.opacity = currentOpacity;
+        e.target.style.backgroundColor = "black";
+        e.target.style.opacity = currentOpacity;
+      }
+      // Other pen modes (non-black pens)
+      else {
+        e.target.style.opacity = 1; // Reset opacity
+        e.target.style.backgroundColor = getSelectedPenColor();
+      }
+    });
+    gridContainer.appendChild(cell);
   }
-});
-gridContainer.appendChild(cell);
 }
 
 // Button click event
@@ -61,6 +62,8 @@ clearBtn.addEventListener("click", () => {
   const cells = document.querySelectorAll(".grid-cell");
   cells.forEach((cell) => {
     cell.style.backgroundColor = "white";
+    cell.style.opacity = 1;
+    cell.dataset.opacity = 0;
   });
 });
 
